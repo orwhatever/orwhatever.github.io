@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise 1 Part 5</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../bootstrap/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../../bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../bootstrap/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../bootstrap/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../../angel/webgl-utils.js"></script>
+    <script type="text/javascript" src="../../angel/initShaders.js"></script>
+    <script type="text/javascript" src="../../angel/MV.js"></script>
+    <script type="text/javascript" src="part05.js"></script>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec4 vPosition;
+    uniform float theta;
+
+    void main()
+    {
+        gl_Position.x = vPosition.x;
+        gl_Position.y = vPosition.y+ 0.7*sin(theta);
+        gl_Position.z = 0.0;
+        gl_Position.w = 1.0;
+    }
+
+
+
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+
+    void main()
+    {
+        gl_FragColor = vec4( 1.0, 1.0, 1.0, 1.0 );
+    }
+
+
+
+    </script>
+</head>
+<body role="document">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container col-md-12">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../main.html">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Exercise 1<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Exercise01/Part1-2/part01-02.html">Part 1 & 2</a></li>
+                        <li><a href="../../Exercise01/Part03/part03.html">Part 3</a></li>
+                        <li><a href="../../Exercise01/Part04/part04.html">Part 4</a></li>
+                        <li><a href="../../Exercise01/Part05/part05.html">Part 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Exercise 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Exercise02/Part01/part01.html">Part 1</a></li>
+                        <li><a href="../../Exercise02/Part02/part02.html">Part 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Exercise 3<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Exercise03/Part01/part01.html">Part 1</a></li>
+                        <li><a href="../../Exercise03/Part02/part02.html">Part 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Exercise 4<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Exercise04/Part1-2/part1-2.html">Part 1 & 2</a></li>
+                        <li><a href="../../Exercise04/Part03/part03.html">Part 3</a></li>
+                        <li><a href="../../Exercise04/Part04/part04.html">Part 4</a></li>
+                        <li><a href="../../Exercise04/Part05/part05.html">Part 5</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="../../Exercise05/Part01/part01.html">Exercise 5</a></li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Exercise 6<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../Exercise06/Part01/part01.html">Part 1 & 2</a></li>
+                        <li><a href="../../Exercise06/Part03/part03.html">Part 3 & 4</a></li>
+                    </ul>
+                </li>
+
+
+                <li><a href="../../Exercise07/Part01/part01.html">Exercise 7</a></li>
+
+
+                <li><a href="../../Exercise08/Part01/part01.html">Exercise 8</a></li>
+
+
+                <li><a href="../../Exercise09/Part01/part01.html">Exercise 9</a></li>
+
+                <li><a href="../../Exercise10/Part01/part01.html">Exercise 10</a></li>
+
+                <li><a href="../../Project/Part01/part01.html">Final Project</a></li>
+
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+
+<div class="container theme-showcase" role="main">
+    <div class="row">
+        <p class="lead text-center">For part 5, the requested scene is rendered below:</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <canvas class="center-block" id="gl-canvas" width="500" height="500">
+                <!-- The following message is displayed if the browser doesn’t
+                -- support HTML5 -->
+                Sorry; your web browser does not support HTML5’s canvas element.
+            </canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-justify">
+            <p>The ball is made to bounce up and down by adding a sine component on the Y coordinate inside the vertex
+                shader. The sine component is controlled using uniform input variable. The angle is increased slightly
+                each time and the image get re-rendered. The rendering is triggered by a call to
+                <code>requestAnimFrame</code></p></div>
+    </div>
+
+</div>
+<!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bootstrap/assets/js/docs.min.js"></script>
+<script src="../../bootstrap/slider/bootstrap-slider.min.js"></script>
+<link href="../../bootstrap/slider/css/bootstrap-slider.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
